@@ -22,11 +22,11 @@
    margin: auto; /* 가운데 정렬 */
 }
 .img_logo{ /* 로고 크기 */
-   width: 150x;
+   width: 120x;
    height: 60px;
 }
 .user_info{
-   width: 770px; /* 밑선 길이 */
+   width: 800px; /* 밑선 길이 */
    height:40px;
    border-bottom: 1px solid black; /* 밑선  */
    display: flex; /* 가로로 정렬 */
@@ -34,24 +34,26 @@
 }
 
 .user_name{
-   margin-left: 15px;
-   margin-top: 10px;
+   margin-left: 10px;
+   margin-top: 17px;
    font-size: 20px;
    color: black;
    display: flex;
+   font-weight: bolder;
 }
 
 
 .hello{
    font-size: 13px;
   /*  margin-left: 13px; */
-   margin-top: 17px;
+   margin-top: 23px;
    color: black;
+   font-weight: bolder;
 }
 
 .nim{
    font-size: 13px;
-  /*  margin-left: 10px; */
+   margin-left: 10px;
    margin-top: 7px;
 }
 
@@ -59,7 +61,7 @@
    background-color: #E7E7E7;
    border-radius: 15px;
    font-size: 12px;
-   margin-left: 10px;
+   margin-left: 15px;
    align-self: center;
    margin-top: 13px;
 }
@@ -69,6 +71,7 @@
    font-size: 25px;
    color: black;
    font-weight: bolder;
+   margin-top: 5px;
 }
 
 .logout{
@@ -287,6 +290,7 @@ img{
 	color: rgb(255, 139, 139);
 	font-size: 28px;
 	margin-left: 10px;
+	margin-top: 5px;
 }
 #trt_cnt{
 	margin-top: 13px;
@@ -475,7 +479,7 @@ let getLocationTemp = async () => {
     document.querySelector('.location').innerHTML = locataionTemp.place;
     document.querySelector('.weather_temp').innerHTML = locataionTemp.temp + 'º ';
     document.querySelector('.weather_statu').innerHTML = locataionTemp.description;
-    document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/${locataionTemp.statu}@2x.png'>`;
+	document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/${locataionTemp.statu}@2x.png'>`;
  
  })();
  
