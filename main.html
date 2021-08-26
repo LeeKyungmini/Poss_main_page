@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="resources/css/reset.css" type="text/css" rel="stylesheet">
+<link href="resources/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="resources/css/all.css">
+<style type="text/css">
+.body{
+   width: 1000px;
+   height: 500px;
+   margin:auto;
+   }
+   
+.nav { /* 상단 네비게이션 바 */
+   width: 1000px;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   margin: auto; /* 가운데 정렬 */
+}
+.img_logo{ /* 로고 크기 */
+   width: 150x;
+   height: 60px;
+}
+.user_info{
+   width: 770px; /* 밑선 길이 */
+   height:40px;
+   border-bottom: 1px solid black; /* 밑선  */
+   display: flex; /* 가로로 정렬 */
+   margin-bottom: 10px;
+}
+
+.user_name{
+   margin-left: 15px;
+   margin-top: 10px;
+   font-size: 20px;
+   color: black;
+   display: flex;
+}
+
+
+.hello{
+   font-size: 13px;
+  /*  margin-left: 13px; */
+   margin-top: 17px;
+   color: black;
+}
+
+.nim{
+   font-size: 13px;
+  /*  margin-left: 10px; */
+   margin-top: 7px;
+}
+
+.my_info{
+   background-color: #E7E7E7;
+   border-radius: 15px;
+   font-size: 12px;
+   margin-left: 10px;
+   align-self: center;
+   margin-top: 13px;
+}
+
+.clock{
+   margin-left: 330px;
+   font-size: 25px;
+   color: black;
+   font-weight: bolder;
+}
+
+.logout{
+   font-size: 25px;
+   align-self: center;
+   margin-left: 15px;
+   color: rgb(255, 139, 139);
+   left: 10px;
+}
+
+#logout_btn{
+}
+
+.pos_btn{
+	width: 200px;
+    height: 320px;
+    font-size: 25px;
+	background-color: rgb(255, 139, 139);
+	color: white;
+	font-weight: bolder;
+	box-shadow: 3px 3px 3px #333;
+	margin-top: 20px;
+	margin-left: 70px;
+	align-content: center;
+}
+
+#dalar{
+	font-size: 50px;
+}
+
+#pos_text{
+	margin-bottom:30px; 
+}
+
+.sales_manage_btn{
+	width: 150px;
+    height: 150px;
+    font-size: 20px;
+	background-color: rgb(97, 191, 173);
+	color: white;
+	font-weight: bolder;
+	box-shadow: 3px 3px 3px #333;
+	margin-top: 23px;
+	margin-left: 30px;
+	align-content: center;
+}
+
+
+#store_icon{
+	margin-left: 3px;
+	font-size: 50px;
+ 	color: black;
+}
+
+#sales_manage_text{
+	margin-bottom:10px; 
+}
+
+.waiting_btn{
+	width: 150px;
+    height: 150px;
+    font-size: 20px;
+	background-color: rgb(249, 247, 232);
+	color: black;
+	font-weight: bolder;
+	box-shadow: 3px 3px 3px #333;
+	margin-top: 23px;
+	margin-left: 30px;
+	align-content: center;
+}
+
+
+#waiting_icon{
+	font-size: 50px;
+ 	color: black;
+}
+
+#waiting_text{
+	margin-bottom:10px; 
+}
+
+
+.main_menu_wrap{
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+
+.notiboard_btn{
+	width: 150px;
+    height: 150px;
+    font-size: 20px;
+	background-color: rgb(249, 247, 232);
+	color: black;
+	font-weight: bolder;
+	box-shadow: 3px 3px 3px #333;
+	margin-left: 30px;
+	margin-top: 18px;
+}
+
+#board_icon{
+	margin-left: 5px;
+	font-size: 50px;
+ 	color: black;
+}
+
+#notiboard_text{
+	margin-bottom:10px; 
+}
+
+.reservation_manage_btn{
+	width: 150px;
+    height: 150px;
+    font-size: 20px;
+	background-color: rgb(255, 213, 125);
+	font-weight: bolder;
+	box-shadow: 3px 3px 3px #333;
+	margin-left: 30px;
+	margin-top: 18px;
+	color: white;
+}
+
+#reservation_manage_icon{
+	margin-left: 5px;
+	font-size: 50px;
+	color: black;
+}
+
+#reservation_manage_text{
+	margin-bottom:10px; 
+}
+
+.today_reservation_btn{
+	width: 230px;
+    height: 150px;
+    font-size: 20px;
+	background-color: white;
+	font-weight: bolder;
+	margin-left: 30px;
+	margin-top: 24px;
+	color: black;
+}
+
+#today_reservation_text{
+	display: flex;
+	justify-content: center;
+}
+
+.today_weather_btn{
+	width: 230px;
+    height: 150px;
+    font-size: 20px;
+	background-color: white;
+	font-weight: bolder;
+	border: 5px solid black;
+	margin-left: 30px;
+	margin-top: 23px;
+	color: black;
+}
+
+
+.location{
+	color: rgb(97, 191, 173);
+}
+
+.location_text{
+}
+
+.weather_temp{
+	margin-left: 130px;
+	color: rgb(255, 139, 139);
+}
+
+.weather_icon{
+	margin-right: 90px;
+	bottom: 30px;
+}
+
+.weather_statu{
+	margin-right: 10px;
+}
+
+.column_1{
+	display: flex;
+	flex-direction: column;
+}
+.column_2{
+	display: flex;
+	flex-direction: column;
+}
+.column_3{
+	display: flex;
+	flex-direction: column;
+}
+
+#trt{
+	font-size: 15px;
+}
+
+#trt_total{
+	margin-top: 13px;
+	font-size: 15px;
+}
+#trt_num{
+	color: rgb(255, 139, 139);
+	font-size: 28px;
+	margin-left: 10px;
+}
+#trt_cnt{
+	margin-top: 13px;
+	margin-left: 8px;
+	font-size: 15px;
+}
+
+</style>
+
+
+</head>
+<body>
+   <div class="nav">
+      <img src="resources/img/LOGO3.png" class="img_logo">
+         <div class="user_info"> <!-- 안녕하세요 구현해조 님 감싸는 디브 -->
+            <div class="hello">
+               	안녕하세요
+            </div>
+            <div class="user_name">
+               <strong>구현해조</strong> 
+               <div class="nim">님!</div>
+            </div>
+            <div class="my_info">
+               <button>> 내정보</button>
+            </div>
+            <div class="clock">
+            </div>
+              <button class="logout">
+              		<div id="logout_btn">
+				      	<i class="fas fa-power-off"></i>
+				    </div>
+              </button>
+         </div>
+      </div>
+      
+   <div class="body">
+   		<div class="main_menu_wrap">
+	   		<div>
+				<button type="button" class="pos_btn">
+					  <div id="dalar">$</div><div id="pos_text">포스</div>
+				</button>
+			</div>
+   			<div class="column_1">
+		    	<button type="button" class="sales_manage_btn">
+		    		<div id="store_icon">
+		    			<i class="fas fa-cash-register"></i>
+		    		</div>
+		      		<div id="sales_manage_text">매출관리</div>
+		    	</button>
+		    	
+		    	<button type="button" class="notiboard_btn">
+				      	<div id="board_icon">
+				      		<i class="far fa-comments"></i>
+				      	</div>
+			     		<div id="notiboard_text">게시판</div>
+			    </button>
+		      	
+		      	
+   			</div>
+		    
+		    <div class="column_2">
+			 	<button type="button" class="waiting_btn">
+			      	<div id="waiting_icon">
+			      		<i class="fas fa-user-clock"></i>
+			      	</div>
+		     		<div id="waiting_text">웨이팅</div>
+		     	</button>
+		     	
+			 	<button type="button" class="reservation_manage_btn">
+			      	<div id="reservation_manage_icon">
+			      		<i class="fas fa-address-book"></i>
+			      	</div>
+		     		<div id="reservation_manage_text">예약내역</div>
+		     	</button>
+		 	</div>
+		 	
+		    <div class="column_3">
+			 	<button type="button" class="today_reservation_btn">
+			      	
+		     		<div id="trt">오늘의 예약은</div>
+		     			<div id="today_reservation_text">
+			     			<div id="trt_total">총</div> 
+			     			<div id="trt_num">5</div> 
+			     			<div id="trt_cnt">건 입니다.</div> 
+               			</div>
+		     	</button>
+			 	
+			 	<button type="button" class="today_weather_btn">
+		     		<span class='location'>위치</span>
+			     	<span class='weather_temp'>날씨</span>
+				    <div class="weather_statu"></div>
+			     	<div class="weather_icon"></div>
+		     	</button>
+		     	
+		     	
+		 	</div>
+		 </div>
+		 
+	</div>
+		      
+	  		
+	  
+
+   
+<script type="text/javascript">
+
+   function renderCurrentTime() {
+      let now = new Date();
+      let hour = now.getHours();
+      let minutes = now.getMinutes();
+      
+        if(hour<12){
+             ampm="AM";
+           }
+        else{
+             ampm="PM";
+           }
+         
+      hour = hour < 10 ? "0"+hour:hour;
+      minutes = minutes < 10 ? "0" + minutes:minutes;
+      document.querySelector('.clock').innerHTML = `${ampm}  ${hour} : ${minutes}`;
+      setTimeout(renderCurrentTime,1000);
+   }
+   
+   renderCurrentTime();
+   
+</script>  
+
+<script type="text/javascript">
+let getLocationTemp = async () => {
+    const OPEN_WEATHER_API_KEY = '2348247efd54eca9a724c64d99b2ce0c';
+    let coords = await getCoords();
+ 
+    let params = {
+          lat:coords.latitude,
+          lon:coords.longitude,
+          appid:OPEN_WEATHER_API_KEY,
+          units:'metric',
+          lang:'kr'
+    };
+    
+    let queryString = createQueryString(params);
+    let url = `https://api.openweathermap.org/data/2.5/weather?${queryString}`;
+    
+    let response = await fetch(url);
+    let obj =  await response.json();
+    console.dir(obj);
+    return {
+       temp : obj.main.temp,
+       place : obj.name,
+       description : obj.weather[0].main,
+       statu : obj.weather[0].icon
+    }
+ }
+ 
+   	let createQueryString = (params) => {
+       let arr = [];
+       for(key in params){
+          arr.push(key + '=' + params[key]);
+       }
+       
+       return arr.join('&');   
+    } 
+ 
+ let getCoords = () => {
+    if(!navigator.geolocation) {
+        return new Promise((resolve,reject)=>{
+           reject();
+         });
+    }else{
+         return new Promise((resolve,reject)=>{
+            navigator.geolocation.getCurrentPosition((position) => {
+               resolve(position.coords);
+            });
+         })
+     }
+ }
+    
+ 
+ (async ()=>{
+    
+    /* 지역과 기온 랜더링*/
+    let locataionTemp = await getLocationTemp();
+    document.querySelector('.location').innerHTML = locataionTemp.place;
+    document.querySelector('.weather_temp').innerHTML = locataionTemp.temp + 'º ';
+   /*  document.querySelector('.weather_statu').innerHTML = locataionTemp.description; */
+    document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/04n@2x.png'>`;
+ 
+ })();
+ 
+ 
+
+</script>
+</body>
+</html>
