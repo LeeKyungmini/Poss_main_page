@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="resources/css/reset.css" type="text/css" rel="stylesheet">
-<link href="resources/css/bootstrap.css" type="text/css" rel="stylesheet">
+<!-- <link href="resources/css/bootstrap.css" type="text/css" rel="stylesheet"> -->
 <link rel="stylesheet" href="resources/css/all.css">
 <style type="text/css">
 .body{
@@ -219,8 +219,8 @@
 
 .today_weather_btn{
 	width: 230px;
-    height: 150px;
-    font-size: 20px;
+    height: 145px;
+    font-size: 19px;
 	background-color: white;
 	font-weight: bolder;
 	border: 5px solid black;
@@ -232,23 +232,34 @@
 
 .location{
 	color: rgb(97, 191, 173);
-}
-
-.location_text{
+	margin-left: 28px;
+	margin-top: 5px;
 }
 
 .weather_temp{
 	margin-left: 130px;
+	margin-top: 10px;
 	color: rgb(255, 139, 139);
+	font-size: 25px;
 }
 
-.weather_icon{
-	margin-right: 90px;
-	bottom: 30px;
+img{
+	width: 110px;
+	height: 110px;
+	
 }
+
+.weather_wrap{
+	display: flex;
+	flex-direction: row-reverse;
+	margin-right: 85px;
+	margin-bottom: 20px;
+}
+
 
 .weather_statu{
-	margin-right: 10px;
+	margin-top: 65px;
+	font-size: 13px;
 }
 
 .column_1{
@@ -363,13 +374,15 @@
                			</div>
 		     	</button>
 			 	
-			 	<button type="button" class="today_weather_btn">
-		     		<span class='location'>위치</span>
-			     	<span class='weather_temp'>날씨</span>
-				    <div class="weather_statu"></div>
-			     	<div class="weather_icon"></div>
-		     	</button>
-		     	
+			 	<div class="today_weather_btn">
+		     		<div class='location'>위치</div>
+			     	<div class='weather_temp'>날씨</div>
+				    <div class="weather_wrap">
+					     <div class="weather_statu"></div>
+				     	<div class="weather_icon"></div>
+				    </div>
+				   
+		     	</div>
 		     	
 		 	</div>
 		 </div>
@@ -382,7 +395,7 @@
    
 <script type="text/javascript">
 
-   function renderCurrentTime() {
+   function renderCurrentTime() { //시간 받아오기
       let now = new Date();
       let hour = now.getHours();
       let minutes = now.getMinutes();
@@ -404,7 +417,7 @@
    
 </script>  
 
-<script type="text/javascript">
+<script type="text/javascript"> //날씨 받아오기
 let getLocationTemp = async () => {
     const OPEN_WEATHER_API_KEY = '2348247efd54eca9a724c64d99b2ce0c';
     let coords = await getCoords();
@@ -461,8 +474,9 @@ let getLocationTemp = async () => {
     let locataionTemp = await getLocationTemp();
     document.querySelector('.location').innerHTML = locataionTemp.place;
     document.querySelector('.weather_temp').innerHTML = locataionTemp.temp + 'º ';
-   /*  document.querySelector('.weather_statu').innerHTML = locataionTemp.description; */
-    document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/${locataionTemp.statu}@2x.png'>`;
+    document.querySelector('.weather_statu').innerHTML = locataionTemp.description;
+    document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/04d@2x.png'>`;
+/*     document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/${locataionTemp.statu}@2x.png'>`; */
  
  })();
  
