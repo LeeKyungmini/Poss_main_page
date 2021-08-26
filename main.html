@@ -462,7 +462,7 @@ let getLocationTemp = async () => {
     document.querySelector('.location').innerHTML = locataionTemp.place;
     document.querySelector('.weather_temp').innerHTML = locataionTemp.temp + 'º ';
    /*  document.querySelector('.weather_statu').innerHTML = locataionTemp.description; */
-    document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/04n@2x.png'>`;
+    document.querySelector('.weather_icon').innerHTML = `<img src = 'http://openweathermap.org/img/wn/${locataionTemp.statu}@2x.png'>`;
  
  })();
  
